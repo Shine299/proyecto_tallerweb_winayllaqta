@@ -1,16 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WiñayLLaqta</title>
+    <title>Wiñay Llaqta | Compañía de Danzas</title>
+    <!-- Aquí enlazarás tu archivo CSS más adelante -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
 </head>
 <body>
-    <header>
-        <h1>Winayllaqta Website</h1>
-        <p>Esta página es el proyecto del curso Taller de Programación </p>
+
+    <!-- NAVEGACIÓN PRINCIPAL -->
+    <header class="header">
+        <div class="logo-container">
+            <!-- Reemplazar con etiqueta img del logo -->
+            <h2>Wiñay Llaqta <span>COMPAÑÍA DE DANZAS</span></h2>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
+                <li><a href="#logros">Logros</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+            </ul>
+            <a href="#contacto" class="btn-primary">Contáctanos</a>
+        </nav>
     </header>
-    <main></main>
-    <footer></footer>
+
+    <main>
+        <!-- SECCIÓN HERO (Inicio) -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="subtitle">COMPAÑÍA DE DANZAS · 23 AÑOS EN ESCENA</span>
+                <h1>El folclore peruano cobra vida en tu evento</h1>
+                <p>23 años de danza, color y tradición peruana, listos para tu escenario.</p>
+                <div class="hero-buttons">
+                    <a href="#servicios" class="btn-primary">Ver nuestros shows</a>
+                    <a href="#contacto" class="btn-outline">Contáctanos</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>DESCUBRE MÁS</span>
+                <!-- Icono de scroll (flecha o mouse) -->
+            </div>
+        </section>
+
+        <!-- SECCIÓN SERVICIOS (Qué hacemos) -->
+        <section id="servicios" class="services">
+            <div class="section-header">
+                <span class="tag">QUÉ HACEMOS</span>
+                <h2>Un escenario para cada ocasión</h2>
+                <p>Del salón de clases al gran teatro: acompañamos tu proyecto con la fuerza y el color de las danzas del Perú.</p>
+            </div>
+
+            <!-- Servicio 1 -->
+            <article class="service-item">
+                <div class="service-image">
+                    <img src="ruta-imagen-formacion.jpg" alt="Danzantes de marinera">
+                </div>
+                <div class="service-info">
+                    <span class="service-number">01 · FORMACIÓN</span>
+                    <h3>Clases y talleres de danza</h3>
+                    <p>Programas para niños, jóvenes y adultos que aprenden marinera, huayno, festejo y más. Grupos reducidos, docentes con trayectoria y una metodología que celebra cada raíz de nuestra cultura.</p>
+                    <a href="#" class="link-more">Conocer más &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Servicio 2 -->
+            <article class="service-item reverse">
+                <div class="service-info">
+                    <span class="service-number">02 · ESCENARIO</span>
+                    <h3>Shows y presentaciones en vivo</h3>
+                    <p>Espectáculos completos con vestuario auténtico, música en vivo y coreografías que recorren la costa, sierra y selva. Ideales para festivales, aniversarios y celebraciones que buscan emocionar.</p>
+                    <a href="#" class="link-more">Conocer más &rarr;</a>
+                </div>
+                <div class="service-image">
+                    <img src="ruta-imagen-shows.jpg" alt="Presentación en vivo escolar">
+                </div>
+            </article>
+
+            <!-- Servicio 3 -->
+            <article class="service-item">
+                <div class="service-image">
+                    <img src="ruta-imagen-direccion.jpg" alt="Danzante de festejo">
+                </div>
+                <div class="service-info">
+                    <span class="service-number">03 · DIRECCIÓN</span>
+                    <h3>Coreografía y dirección artística</h3>
+                    <p>Creamos piezas a medida para tu marca, obra o evento: concepto, montaje, vestuario y puesta en escena. Traducimos tu idea al lenguaje del folclore con rigor y sensibilidad artística.</p>
+                    <a href="#" class="link-more">Conocer más &rarr;</a>
+                </div>
+            </article>
+            
+            <!-- Servicio 4 (Mencionado en el prototipo) -->
+            <article class="service-item reverse">
+                 <div class="service-info">
+                    <span class="service-number">04 · CORPORATIVO</span>
+                    <!-- Agrega el título y párrafo cuando lo tengas definido -->
+                 </div>
+                 <div class="service-image">
+                    <img src="ruta-imagen-corporativo.jpg" alt="Evento corporativo">
+                 </div>
+            </article>
+        </section>
+
+        <!-- SECCIÓN SOBRE NOSOTROS -->
+        <section id="sobre-nosotros" class="about">
+            <div class="about-image-container">
+                <img src="ruta-imagen-nosotros.jpg" alt="Bailarina de danza peruana">
+                <div class="badge">23<br>AÑOS EN ESCENA</div>
+            </div>
+            <div class="about-content">
+                <span class="tag">SOBRE NOSOTROS</span>
+                <h2>Sembramos folclore desde hace 23 años</h2>
+                <p><strong>Wiñay Llaqta</strong> —"pueblo que crece" en quechua— nació de un grupo de bailarines apasionados por mostrar la riqueza de las danzas del Perú. Dos décadas después seguimos formando artistas y llevando nuestro repertorio a los escenarios de todo el país, siempre fieles a la raíz y abiertos a la creación.</p>
+                
+                <div class="mission-vision">
+                    <div class="card mission">
+                        <h3>Misión</h3>
+                        <p>Difundir y preservar las danzas folclóricas del Perú con excelencia artística, formando comunidad alrededor de nuestra cultura.</p>
+                    </div>
+                    <div class="card vision">
+                        <h3>Visión</h3>
+                        <p>Ser la compañía de danzas peruana de referencia, presente en los grandes escenarios y en el corazón de cada nueva generación.</p>
+                    </div>
+                </div>
+
+                <ul class="values-list">
+                    <li>Tradición</li>
+                    <li>Disciplina</li>
+                    <li>Comunidad</li>
+                    <li>Pasión</li>
+                    <li>Excelencia</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECCIÓN TRAYECTORIA (Galería) -->
+        <section id="trayectoria" class="gallery">
+            <div class="section-header">
+                <span class="tag">GALERÍA DE ESCENARIOS</span>
+                <h2>Nuestra Trayectoria en Escena</h2>
+                <p>Un recorrido por las danzas que hemos llevado a los escenarios del Perú y más allá.</p>
+            </div>
+            <div class="gallery-grid">
+                <!-- Añade las 6 imágenes correspondientes -->
+                <img src="galeria-1.jpg" alt="Danza 1">
+                <img src="galeria-2.jpg" alt="Danza 2">
+                <img src="galeria-3.jpg" alt="Danza 3">
+                <img src="galeria-4.jpg" alt="Danza 4">
+                <img src="galeria-5.jpg" alt="Danza 5">
+                <img src="galeria-6.jpg" alt="Danza 6">
+            </div>
+        </section>
+
+        <!-- SECCIÓN LOGROS (Estadísticas) -->
+        <section id="logros" class="stats">
+            <span class="tag">LOGROS</span>
+            <h2>Una trayectoria que se baila</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <h3>23</h3>
+                    <p>Años de trayectoria</p>
+                </div>
+                <div class="stat-box">
+                    <h3>1,200+</h3>
+                    <p>Shows presentados *</p>
+                </div>
+                <div class="stat-box">
+                    <h3>4,500+</h3>
+                    <p>Alumnos formados *</p>
+                </div>
+                <div class="stat-box">
+                    <h3>300+</h3>
+                    <p>Eventos corporativos *</p>
+                </div>
+            </div>
+            <p class="disclaimer">* Cifras referenciales de ejemplo — reemplazar con datos reales antes de publicar.</p>
+            
+            <div class="events-tags">
+                <span>Festival Nacional de Folclore</span>
+                <span>Semana Cultural del Perú</span>
+                <span>Gala de Danzas del Bicentenario</span>
+                <span>Encuentro Latinoamericano de Danza</span>
+            </div>
+        </section>
+
+        <!-- SECCIÓN TESTIMONIOS -->
+        <section id="testimonios" class="testimonials">
+            <div class="section-header">
+                <span class="tag">TESTIMONIOS</span>
+                <h2>Lo que dicen de nosotros</h2>
+                <p>* Testimonios de ejemplo — reemplazar con reseñas reales antes de publicar.</p>
+            </div>
+            
+            <div class="testimonials-carousel">
+                <!-- Flecha Izquierda para control visual -->
+                <button class="carousel-control prev">&lt;</button>
+                
+                <div class="testimonial-cards-container">
+                    <article class="testimonial-card">
+                        <img src="avatar-1.jpg" alt="Rosa Quispe" class="avatar">
+                        <div class="rating">★★★★★</div>
+                        <blockquote>"Mi hija encontró en Wiñay Llaqta disciplina, amigas y un amor enorme por nuestras danzas."</blockquote>
+                        <h4>Rosa Quispe</h4>
+                        <p>Madre de alumna</p>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <img src="avatar-2.jpg" alt="Diego Salinas" class="avatar">
+                        <div class="rating">★★★★★</div>
+                        <blockquote>"Profesionales de principio a fin. La activación de marca superó nuestras expectativas."</blockquote>
+                        <h4>Diego Salinas</h4>
+                        <p>Coordinador de eventos corporativos</p>
+                    </article>
+
+                    <article class="testimonial-card">
+                        <img src="avatar-3.jpg" alt="Ana Torres" class="avatar">
+                        <div class="rating">★★★★★</div>
+                        <blockquote>"Su elenco elevó nuestro festival. Puntualidad, arte y un cariño genuino por el público."</blockquote>
+                        <h4>Ana Torres</h4>
+                        <p>Gestora cultural municipal</p>
+                    </article>
+                </div>
+                
+                <!-- Flecha Derecha para control visual -->
+                <button class="carousel-control next">&gt;</button>
+            </div>
+            
+            <!-- Indicadores de carrusel (puntos) -->
+            <div class="carousel-indicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA (Footer) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>Wiñay Llaqta</h2>
+                <p>Compañía de danzas folclóricas del Perú.<br>Color, tradición y arte en cada escenario.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>EXPLORA</h3>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#trayectoria">Trayectoria</a></li>
+                    <li><a href="#logros">Logros</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contáctanos</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-legal-social">
+                <h3>LEGAL</h3>
+                <a href="#" class="btn-libro">📕 Libro de Reclamaciones Virtual</a>
+                
+                <div class="social-links">
+                    <a href="#" class="social-btn">Facebook</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                    <a href="#" class="social-btn">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Wiñay Llaqta · Compañía de Danzas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
