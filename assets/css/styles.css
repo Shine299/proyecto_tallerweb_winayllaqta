@@ -5,8 +5,8 @@
     --color-background: #faf6ed;
     --color-white: #ffffff;
     --color-text: #535b64;
-    --font-title: Georgia, "Times New Roman", serif;
-    --font-body: Arial, Helvetica, sans-serif;
+    --font-title: "Josefin Sans", serif;
+    --font-body: "Figtree", sans-serif;
 }
 
 /* Reinicio y estilos generales */
@@ -126,7 +126,7 @@ section {
     margin-right: 16px;
 }
 
-.logo-container span {
+.logo-container p {
     display: block;
     font-family: var(--font-body);
     font-size: 12px;
@@ -282,7 +282,7 @@ section {
     font-size: 36px;
 }
 
-.events-tags span {
+.events-tags p {
     margin: 0 16px 8px 0;
 }
 
