@@ -1,0 +1,326 @@
+/* Identidad visual básica */
+:root {
+    --color-primary: #142b45;
+    --color-secondary: #d6ad55;
+    --color-background: #faf6ed;
+    --color-white: #ffffff;
+    --color-text: #535b64;
+    --font-title: Georgia, "Times New Roman", serif;
+    --font-body: Arial, Helvetica, sans-serif;
+}
+
+/* Reinicio y estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3 {
+    color: var(--color-primary);
+    font-family: var(--font-title);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+p {
+    margin-bottom: 16px;
+}
+
+section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.section-header {
+    margin-bottom: 24px;
+}
+
+.tag, .subtitle, .service-number {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.disclaimer {
+    font-size: 14px;
+}
+
+.btn-primary, .btn-outline {
+    display: inline-block;
+    padding: 10px 18px;
+    text-decoration: none;
+    text-align: center;
+    border: 1px solid var(--color-secondary);
+}
+
+.btn-primary {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.btn-outline {
+    color: var(--color-white);
+}
+
+/* Cabecera: marca, menú y enlace de contacto */
+.header {
+    background: var(--color-white);
+    padding: 16px 0;
+}
+
+.header-container, .navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    color: var(--color-primary);
+    font-family: var(--font-title);
+    font-size: 24px;
+    text-decoration: none;
+    margin-right: 16px;
+}
+
+.logo-container span {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 12px;
+}
+
+.navbar a {
+    display: inline-block;
+    padding: 8px;
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+/* Inicio: se puede incorporar una fotografía de fondo más adelante */
+.hero {
+    background-color: var(--color-primary);
+    /* Activar cuando exista el archivo: background-image: url("../img/hero-danza.webp"); */
+    color: var(--color-white);
+    padding: 64px 0;
+}
+
+.hero h1 {
+    color: var(--color-white);
+    max-width: 700px;
+}
+
+.hero p {
+    max-width: 650px;
+}
+
+.subtitle {
+    color: var(--color-secondary);
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero-buttons a {
+    margin: 8px 16px 0 0;
+}
+
+/* Servicios: el orden del HTML alterna imagen y contenido */
+.service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    background: var(--color-white);
+}
+
+.service-image, .service-info {
+    width: 50%;
+    padding: 24px;
+}
+
+.service-image img {
+    width: 100%;
+}
+
+.link-more {
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Sobre nosotros, misión, visión y valores */
+.about, .mission-vision {
+    display: flex;
+}
+
+.about {
+    align-items: center;
+}
+
+.about-image-container {
+    width: 40%;
+    padding-right: 24px;
+}
+
+.about-content {
+    width: 60%;
+}
+
+.badge {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 16px;
+    margin-top: 16px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card {
+    width: 50%;
+    padding: 16px;
+    background: var(--color-white);
+}
+
+.values-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.values-list li {
+    margin: 0 16px 8px 0;
+    font-weight: bold;
+}
+
+/* Equipo y testimonios: tarjetas estáticas en fila */
+.team-members, .testimonial-cards-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-member, .testimonial-card {
+    width: 32%;
+    padding: 24px;
+    background: var(--color-white);
+}
+
+.team-member img {
+    margin-bottom: 16px;
+}
+
+/* Galería: las imágenes se distribuyen en varias filas */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery-container img {
+    width: 32%;
+    margin-bottom: 24px;
+}
+
+/* Logros y eventos referenciales */
+.stats-container, .events-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 24px 0;
+}
+
+.stat-box {
+    width: 25%;
+    padding: 16px;
+    text-align: center;
+}
+
+.stat-box h3 {
+    font-size: 36px;
+}
+
+.events-tags span {
+    margin: 0 16px 8px 0;
+}
+
+/* Contacto: información básica sin formulario */
+.contact-content {
+    display: flex;
+}
+
+.contact-content div {
+    width: 50%;
+    padding: 16px;
+    background: var(--color-white);
+}
+
+/* Pie de página */
+.footer {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 32px 0;
+}
+
+.footer h2, .footer h3 {
+    color: var(--color-secondary);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-brand, .footer-links, .footer-legal-social {
+    width: 30%;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    margin-top: 24px;
+}
