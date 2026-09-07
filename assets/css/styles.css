@@ -140,12 +140,27 @@ section {
     color: var(--color-primary);
 }
 
-/* Inicio: se puede incorporar una fotografía de fondo más adelante */
+/* Inicio */
 .hero {
     background-color: var(--color-primary);
-    /* Activar cuando exista el archivo: background-image: url("../img/hero-danza.webp"); */
     color: var(--color-white);
     padding: 64px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-copy, .hero-visual {
+    width: 50%;
+}
+
+.hero-visual img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
 }
 
 .hero h1 {
@@ -185,6 +200,8 @@ section {
 
 .service-image img {
     width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
 }
 
 .link-more {
@@ -249,6 +266,9 @@ section {
 }
 
 .team-member img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
     margin-bottom: 16px;
 }
 
@@ -261,6 +281,8 @@ section {
 
 .gallery-container img {
     width: 32%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
     margin-bottom: 24px;
 }
 
@@ -323,4 +345,67 @@ section {
 
 .footer-bottom {
     margin-top: 24px;
+}
+
+/* Adaptación para tabletas y teléfonos */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 34px;
+    }
+
+    .header-container, .hero-content, .service-item, .about, .mission-vision,
+    .team-members, .testimonial-cards-container, .contact-content, .footer-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .navbar ul {
+        justify-content: flex-start;
+    }
+
+    .hero-copy, .hero-visual, .service-image, .service-info, .about-image-container,
+    .about-content, .card, .team-member, .testimonial-card, .contact-content div,
+    .footer-brand, .footer-links, .footer-legal-social {
+        width: 100%;
+    }
+
+    .hero-visual {
+        margin-top: 24px;
+    }
+
+    .service-item:nth-of-type(even) .service-info {
+        order: 2;
+    }
+
+    .service-item:nth-of-type(even) .service-image {
+        order: 1;
+    }
+
+    .about-image-container {
+        padding-right: 0;
+        margin-bottom: 24px;
+    }
+
+    .team-member, .testimonial-card {
+        margin-bottom: 16px;
+    }
+
+    .gallery-container img {
+        width: 49%;
+    }
+
+    .stat-box {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container img, .stat-box {
+        width: 100%;
+    }
 }
