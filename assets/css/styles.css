@@ -1,19 +1,39 @@
-/* Identidad visual básica */
+/* VARIABLES CSS */
 :root {
+    /* Paleta de colores */
     --color-primary: #142b45;
     --color-secondary: #d6ad55;
     --color-background: #faf6ed;
     --color-white: #ffffff;
     --color-text: #535b64;
+    --color-border: #e6dfcd;
+    --color-footer-text: #c8d4e2;
+
+    /* Tipografías */
     --font-title: "Josefin Sans", serif;
     --font-body: "Figtree", sans-serif;
 }
 
-/* Reinicio y estilos generales */
+
+
+/* Selectores */
+
+/* Selector universal de elementos HTML */
 * {
+    /* Eliminar los espacios predeterminados */
     margin: 0;
     padding: 0;
+
+    /* Evita que cambie el tamaño de la caja al agregar espacios */
     box-sizing: border-box;
+}
+
+
+
+/* Selectores de tipo etiqueta HTML */
+html {
+    /* Suavizar el desplazamiento del scroll vertical */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -24,7 +44,8 @@ body {
     line-height: 1.6;
 }
 
-img {
+/* Eliminar espacios inferiores y ajustar al ancho de la caja padre */
+img, video, iframe {
     display: block;
     max-width: 100%;
     height: auto;
@@ -62,16 +83,87 @@ p {
 }
 
 section {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    /* Evita que la cabecera fija tape el título al saltar a una sección */
+    scroll-margin-top: 70px;
 }
 
+/* Selectores de tipo identificador (id) */
+#top-bar {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#servicios {
+    background: var(--color-background);
+}
+
+#tarifas {
+    background: var(--color-white);
+}
+
+#sobre-nosotros {
+    background: var(--color-background);
+}
+
+#equipo {
+    background: var(--color-white);
+}
+
+#trayectoria {
+    background: var(--color-background);
+}
+
+#video {
+    background: var(--color-white);
+}
+
+#logros {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+#logros h2, #logros h3 {
+    color: var(--color-white);
+}
+
+#logros .stat-box h3 {
+    color: var(--color-secondary);
+}
+
+#testimonios {
+    background: var(--color-background);
+}
+
+#contacto {
+    background: var(--color-white);
+}
+
+#pie {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+
+/* Selectores de tipo clase (class) */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding-left: 24px;
     padding-right: 24px;
+}
+
+.padding-xl {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.padding-xs {
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .section-header {
@@ -88,12 +180,14 @@ section {
     font-size: 14px;
 }
 
+/* Botones */
 .btn-primary, .btn-outline {
     display: inline-block;
     padding: 10px 18px;
     text-decoration: none;
     text-align: center;
     border: 1px solid var(--color-secondary);
+    transition: all 0.4s ease-in-out;
 }
 
 .btn-primary {
@@ -101,14 +195,68 @@ section {
     color: var(--color-primary);
 }
 
+.btn-primary:hover {
+    background: var(--color-white);
+    border-color: var(--color-white);
+}
+
 .btn-outline {
     color: var(--color-white);
 }
 
+.btn-outline:hover {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+.link-more {
+    color: var(--color-primary);
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+}
+
+.link-more:hover {
+    color: var(--color-secondary);
+}
+
 /* Cabecera: marca, menú y enlace de contacto */
 .header {
+    /* Mantener la cabecera visible al desplazar la página */
+    position: sticky;
+    top: 0px;
     background: var(--color-white);
     padding: 16px 0;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Barra superior: contacto y redes sociales */
+.top-bar-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.top-bar-flex a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.top-bar-flex a:hover {
+    color: var(--color-secondary);
+}
+
+.top-contacto, .top-rs {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.top-rs {
+    gap: 16px;
 }
 
 .header-container, .navbar ul {
@@ -126,50 +274,48 @@ section {
     margin-right: 16px;
 }
 
-.logo-container p {
-    display: block;
-    font-family: var(--font-body);
-    font-size: 12px;
-}
-
 .navbar a {
-    display: inline-block;
-    padding: 8px;
+    display: inline-block; /* Convierte el texto en caja */
+    padding: 8px 10px;
     font-size: 14px;
     text-decoration: none;
     color: var(--color-primary);
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
 }
 
-/* Inicio */
+.navbar a:hover {
+    background: var(--color-secondary);
+}
+
+/* Portada */
 .hero {
+    /* Controlar la posición de las cajas hijo dentro de la caja padre */
+    position: relative;
     background-color: var(--color-primary);
     color: var(--color-white);
-    padding: 64px 0;
 }
 
-.hero-content {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.hero-copy, .hero-visual {
-    width: 50%;
-}
-
-.hero-visual img {
+/* El video cubre todo el ancho; object-fit recorta sin deformar */
+.hero-video {
     width: 100%;
-    aspect-ratio: 3 / 2;
+    height: 560px;
     object-fit: cover;
+}
+
+.hero-texto {
+    /* Permite posicionar la caja hijo encima del video */
+    position: absolute;
+    bottom: 48px;
+    left: 5%;
+    width: 560px;
+    max-width: 90%;
+    background-color: rgba(0,0,0,0.55);
+    padding: 25px;
 }
 
 .hero h1 {
     color: var(--color-white);
-    max-width: 700px;
-}
-
-.hero p {
-    max-width: 650px;
 }
 
 .subtitle {
@@ -204,21 +350,18 @@ section {
     object-fit: cover;
 }
 
-.link-more {
-    color: var(--color-primary);
-    font-weight: bold;
-}
-
 /* Sobre nosotros, misión, visión y valores */
-.about, .mission-vision {
+.about-row, .mission-vision {
     display: flex;
 }
 
-.about {
+.about-row {
     align-items: center;
 }
 
 .about-image-container {
+    /* Controlar la posición de las cajas hijo dentro de la caja padre */
+    position: relative;
     width: 40%;
     padding-right: 24px;
 }
@@ -228,10 +371,13 @@ section {
 }
 
 .badge {
+    /* Permite posicionar la caja hijo encima de la imagen */
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
     background: var(--color-secondary);
     color: var(--color-primary);
     padding: 16px;
-    margin-top: 16px;
     text-align: center;
     font-weight: bold;
 }
@@ -240,6 +386,7 @@ section {
     width: 50%;
     padding: 16px;
     background: var(--color-white);
+    border: 1px solid var(--color-border);
 }
 
 .values-list {
@@ -263,6 +410,12 @@ section {
     width: 32%;
     padding: 24px;
     background: var(--color-white);
+    border: 1px solid var(--color-border);
+    transition: all 0.4s ease-in-out;
+}
+
+.team-member:hover, .testimonial-card:hover {
+    border-color: var(--color-secondary);
 }
 
 .team-member img {
@@ -275,7 +428,7 @@ section {
 /* Galería: las imágenes se distribuyen en varias filas */
 .gallery-container {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Permite cajas flexbox hijo en múltiples filas */
     justify-content: space-between;
 }
 
@@ -284,6 +437,66 @@ section {
     aspect-ratio: 3 / 2;
     object-fit: cover;
     margin-bottom: 24px;
+    transition: all 0.4s ease-in-out;
+}
+
+.gallery-container img:hover {
+    opacity: 0.8;
+}
+
+/* Tabla de tarifas */
+.tbl-tarifas {
+    width: 100%;
+    border-collapse: collapse; /* Combinar los bordes */
+    background: var(--color-white);
+}
+
+.tbl-tarifas th,
+.tbl-tarifas td {
+    border: 1px solid var(--color-border);
+    padding: 15px;
+}
+
+.tbl-tarifas thead {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
+.tbl-tarifas tbody tr {
+    transition: all 0.4s ease-in-out;
+}
+
+.tbl-tarifas tbody tr:hover {
+    background-color: var(--color-background);
+}
+
+.tbl-tarifas tbody td:nth-child(3) {
+    text-align: right;
+}
+
+.tbl-tarifas tfoot {
+    text-align: right;
+    font-style: italic;
+    font-size: smaller;
+}
+
+/* Video institucional */
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-fluid {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 7;
+    background: var(--color-primary);
+}
+
+.video-canal {
+    margin-top: 24px;
+    text-align: center;
 }
 
 /* Logros y eventos referenciales */
@@ -304,28 +517,82 @@ section {
     font-size: 36px;
 }
 
-.events-tags p {
+.events-tags span {
     margin: 0 16px 8px 0;
+    padding: 6px 16px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 20px;
+    transition: all 0.4s ease-in-out;
 }
 
-/* Contacto: información básica sin formulario */
+.events-tags span:hover {
+    background: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+/* Contacto: información básica y formulario */
 .contact-content {
     display: flex;
+    margin-bottom: 32px;
 }
 
 .contact-content div {
     width: 50%;
     padding: 16px;
-    background: var(--color-white);
+    background: var(--color-background);
+}
+
+.form-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite cajas flexbox hijo en múltiples filas */
+    gap: 20px;
+}
+
+.form-col-50 {
+    flex: 48%;
+}
+
+.form-col-100 {
+    flex: 100%;
+}
+
+.form-control {
+    width: 100%;
+    font: inherit; /* Hereda la fuente del body */
+    color: inherit;
+    padding: 10px 5px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--color-text);
+    transition: all 0.4s ease-in-out;
+}
+
+.form-control:focus {
+    border-bottom-color: var(--color-secondary);
+}
+
+.form-noresize {
+    resize: none;
+}
+
+.form-submit {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 10px 30px;
+    font: inherit;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.form-submit:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 /* Pie de página */
-.footer {
-    background: var(--color-primary);
-    color: var(--color-white);
-    padding: 32px 0;
-}
-
 .footer h2, .footer h3 {
     color: var(--color-secondary);
 }
@@ -339,11 +606,62 @@ section {
     width: 30%;
 }
 
+.footer-logo {
+    width: 220px;
+    margin-bottom: 16px;
+}
+
 .footer-links li {
     margin-bottom: 8px;
+}
+
+.footer-links a {
+    color: var(--color-footer-text);
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.footer-links a:hover {
+    color: var(--color-secondary);
+}
+
+/* Redes sociales */
+.footer-rs {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-rs a {
+    color: var(--color-footer-text);
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.footer-rs a:hover {
+    color: var(--color-secondary);
 }
 
 .footer-bottom {
     margin-top: 24px;
 }
 
+/* Botón flotante para volver arriba */
+.scroll-up {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+
+    z-index: 1000;
+}

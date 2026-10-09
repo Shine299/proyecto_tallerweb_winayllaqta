@@ -1,27 +1,91 @@
+<!-- Representa la versión 5 de HTML -->
 <!DOCTYPE html>
+
+<!-- Representa la página en la ventana del navegador -->
 <html lang="es">
 
+<!-- Configuración de la página -->
 <head>
+    <!-- Conjunto de caracteres para el idioma español -->
     <meta charset="UTF-8">
+
+    <!-- Permite habilitar el diseño web responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la pestaña en el navegador -->
     <title>Wiñay Llaqta | Compañía de Danzas</title>
 
-    <!-- Fonts -->
+    <!-- Enlazar el HTML con la hoja de estilos externa -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Enlazar el HTML con fuentes externas de Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
-    <!-- Conexion a CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Enlazar el HTML con la librería de iconos de font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Enlazar el HTML con el favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/logo-winay-llaqta.svg" type="image/svg+xml">
 </head>
 
+<!-- Contenido de la página -->
 <body>
 
-    <!-- NAVEGACIÓN PRINCIPAL -->
+    <!-- Barra superior (top-bar) -->
+    <header id="top-bar">
+        <!-- Ajustar el ancho y centrar la caja -->
+        <div class="container">
+            <!-- Flexbox del top-bar -->
+            <div class="top-bar-flex">
+                <!-- Contactos (el teléfono es de ejemplo, reemplazar por el real) -->
+                <div class="top-contacto">
+                    <!-- Teléfono -->
+                    <a href="tel:+51972591692">
+                        <i class="fa-solid fa-phone"></i>
+                        +51 972 591 692
+                    </a>
+
+                    <!-- Correo electrónico -->
+                    <a href="mailto:winayllaqta@gmail.com?subject=Necesito información">
+                        <i class="fa-solid fa-envelope"></i>
+                        winayllaqta@gmail.com
+                    </a>
+                </div>
+
+                <!-- Redes sociales (enlaces genéricos, reemplazar por los perfiles oficiales) -->
+                <div class="top-rs">
+                    <a href="https://facebook.com/" target="_blank" rel="noopener" title="Facebook">
+                        <i class="fa-brands fa-facebook fa-xl"></i>
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </a>
+                    <a href="https://tiktok.com/" target="_blank" rel="noopener" title="TikTok">
+                        <i class="fa-brands fa-tiktok fa-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Wi%C3%B1ayLlaqtaPer%C3%BA" target="_blank" rel="noopener" title="YouTube">
+                        <i class="fa-brands fa-youtube fa-xl"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=51972591692&text=Hola, necesito información sobre sus servicios de danza" target="_blank" rel="noopener" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp fa-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabecera de página -->
     <header class="header">
+        <!-- Ajustar el ancho y centrar la caja -->
         <div class="container header-container">
-            <a href="#inicio" class="logo-container">Wiñay Llaqta</a>
-            <div class="navbar">
+            <!-- Logo -->
+            <a href="#inicio" class="logo-container" title="Inicio">Wiñay Llaqta</a>
+
+            <!-- Barra de menú -->
+            <nav class="navbar">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
@@ -31,286 +95,479 @@
                     <li><a href="#logros">Logros</a></li>
                     <li><a href="#testimonios">Testimonios</a></li>
                 </ul>
-            </div>
+            </nav>
+
+            <!-- Botón de contacto -->
             <a href="#contacto" class="btn-primary">Contáctanos</a>
         </div>
     </header>
 
+    <!-- Contenido principal -->
     <main>
-        <!-- SECCIÓN HERO -->
+
+        <!-- Portada -->
         <section id="inicio" class="hero">
-            <div class="container hero-content">
-                <div class="hero-copy">
-                    <span class="subtitle">COMPAÑÍA DE DANZAS · 23 AÑOS EN ESCENA</span>
-                    <h1>El folclore peruano cobra vida en tu evento</h1>
-                    <p>23 años de danza, color y tradición peruana, listos para tu escenario.</p>
-                    <div class="hero-buttons">
-                        <a href="#servicios" class="btn-primary">Ver nuestros shows</a>
-                        <a href="#contacto" class="btn-outline">Contáctanos</a>
+            <!-- Objeto video de portada: clip corto, sin sonido y en bucle -->
+            <video class="hero-video" autoplay muted loop playsinline poster="assets/img/portada-poster.jpg">
+                <source src="assets/video/portada-winay.mp4" type="video/mp4">
+            </video>
+
+            <!-- Texto sobre el video -->
+            <div class="hero-texto">
+                <span class="subtitle">COMPAÑÍA DE DANZAS · 23 AÑOS EN ESCENA</span>
+                <h1>El folclore peruano cobra vida en tu evento</h1>
+                <p>23 años de danza, color y tradición peruana, listos para tu escenario.</p>
+
+                <!-- Botones de acción -->
+                <div class="hero-buttons">
+                    <a href="#servicios" class="btn-primary">Ver nuestros shows</a>
+                    <a href="#contacto" class="btn-outline">Contáctanos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nuestros servicios -->
+        <section id="servicios" class="services padding-xl">
+            <!-- Ajustar el ancho y centrar la caja -->
+            <div class="container">
+                <!-- Título de la sección -->
+                <div class="section-header">
+                    <span class="tag">QUÉ HACEMOS</span>
+                    <h2>Un escenario para cada ocasión</h2>
+                    <p>Del salón de clases al gran teatro: acompañamos tu proyecto con la fuerza y el color de las danzas
+                        del Perú.</p>
+                </div>
+
+                <!-- Servicio 1 -->
+                <article class="service-item">
+                    <div class="service-image">
+                        <img src="assets/img/carnaval-tres.webp" width="1600" height="1068"
+                            alt="Danzante con vestuario colorido de carnaval">
+                    </div>
+                    <div class="service-info">
+                        <span class="service-number">FORMACIÓN</span>
+                        <h3>Clases y talleres de danza</h3>
+                        <p>Programas para niños, jóvenes y adultos que aprenden marinera, huayno, festejo y más. Grupos
+                            reducidos, docentes con trayectoria y una metodología que celebra cada raíz de nuestra cultura.
+                        </p>
+                        <a href="#contacto" class="link-more">Consultar talleres</a>
+                    </div>
+                </article>
+
+                <!-- Servicio 2 -->
+                <article class="service-item">
+                    <div class="service-info">
+                        <span class="service-number">ESCENARIO</span>
+                        <h3>Shows y presentaciones en vivo</h3>
+                        <p>Espectáculos completos con vestuario auténtico, música en vivo y coreografías que recorren la
+                            costa, sierra y selva. Ideales para festivales, aniversarios y celebraciones que buscan
+                            emocionar.</p>
+                        <a href="#contacto" class="link-more">Consultar shows</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="assets/img/wallatas-once.webp" width="1600" height="1068"
+                            alt="Elenco interpretando la danza Wallatas en el escenario">
+                    </div>
+                </article>
+
+                <!-- Servicio 3 -->
+                <article class="service-item">
+                    <div class="service-image">
+                        <img src="assets/img/tondero.webp" width="1600" height="1068"
+                            alt="Pareja interpretando tondero durante una presentación">
+                    </div>
+                    <div class="service-info">
+                        <span class="service-number">DIRECCIÓN</span>
+                        <h3>Coreografía y dirección artística</h3>
+                        <p>Creamos piezas a medida para tu marca, obra o evento: concepto, montaje, vestuario y puesta en
+                            escena. Traducimos tu idea al lenguaje del folclore con rigor y sensibilidad artística.</p>
+                        <a href="#contacto" class="link-more">Consultar coreografías</a>
+                    </div>
+                </article>
+
+                <!-- Servicio 4 -->
+                <article class="service-item">
+                    <div class="service-info">
+                        <span class="service-number">CORPORATIVO</span>
+                        <h3>Danzas para eventos corporativos</h3>
+                        <p>Acompañamos celebraciones de empresas y encuentros institucionales con danzas peruanas.
+                            Coordinamos el repertorio y la presentación según la ocasión y el espacio disponible.</p>
+                        <a href="#contacto" class="link-more">Consultar sobre eventos</a>
+                    </div>
+                    <div class="service-image">
+                        <img src="assets/img/cuadro-limeño-cincuenta-y-cinco.webp" width="1600" height="1068"
+                            alt="Pareja bailando un cuadro limeño ante el público">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Lista de tarifas -->
+        <section id="tarifas" class="summary padding-xl">
+            <!-- Ajustar el ancho y centrar la caja -->
+            <div class="container">
+                <!-- Título de la sección -->
+                <div class="section-header">
+                    <span class="tag">TARIFAS</span>
+                    <h2>Servicios y tarifas</h2>
+                </div>
+
+                <!-- Objeto tabla -->
+                <table class="tbl-tarifas">
+                    <!-- Cabecera de la tabla -->
+                    <thead>
+                        <tr>
+                            <th>Descripción del servicio</th>
+                            <th>Ideal para</th>
+                            <th>Precio <sup>*</sup></th>
+                        </tr>
+                    </thead>
+
+                    <!-- Cuerpo de la tabla -->
+                    <tbody>
+                        <tr>
+                            <td>Clases y talleres de danza</td>
+                            <td>Niños, jóvenes y adultos</td>
+                            <td>A consultar</td>
+                        </tr>
+                        <tr>
+                            <td>Shows y presentaciones en vivo</td>
+                            <td>Festivales, aniversarios y celebraciones</td>
+                            <td>A consultar</td>
+                        </tr>
+                        <tr>
+                            <td>Coreografía y dirección artística</td>
+                            <td>Marcas, obras y eventos a medida</td>
+                            <td>A consultar</td>
+                        </tr>
+                        <tr>
+                            <td>Danzas para eventos corporativos</td>
+                            <td>Empresas y encuentros institucionales</td>
+                            <td>A consultar</td>
+                        </tr>
+                    </tbody>
+
+                    <!-- Pie de la tabla -->
+                    <tfoot>
+                        <tr>
+                            <td colspan="3">(*) Para conocer tarifas y disponibilidad, escríbenos desde la sección de <a class="link-more" href="#contacto">contacto</a></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sobre nosotros -->
+        <section id="sobre-nosotros" class="about padding-xl">
+            <!-- Ajustar el ancho y centrar la caja -->
+            <div class="container">
+                <!-- Alineación flexible de los elementos -->
+                <div class="about-row">
+                    <!-- Columna 1 -->
+                    <div class="about-image-container">
+                        <img src="assets/img/cuadro-limeño-siete.webp" width="1600" height="1068"
+                            alt="Elenco de Wiñay Llaqta reunido después de una presentación">
+                        <div class="badge">23<br>AÑOS EN ESCENA</div>
+                    </div>
+
+                    <!-- Columna 2 -->
+                    <div class="about-content">
+                        <span class="tag">SOBRE NOSOTROS</span>
+                        <h2>Sembramos folclore desde hace 23 años</h2>
+                        <p><strong>Wiñay Llaqta</strong> ("pueblo que crece" en quechua) nació de un grupo de bailarines
+                            apasionados por mostrar la riqueza de las danzas del Perú. Dos décadas después seguimos formando
+                            artistas y llevando nuestro repertorio a los escenarios de todo el país, siempre fieles a la raíz y
+                            abiertos a la creación.</p>
+
+                        <!-- Misión y visión -->
+                        <div class="mission-vision">
+                            <div class="card">
+                                <h3>Misión</h3>
+                                <p>Difundir y preservar las danzas folclóricas del Perú con excelencia artística, formando
+                                    comunidad alrededor de nuestra cultura.</p>
+                            </div>
+                            <div class="card">
+                                <h3>Visión</h3>
+                                <p>Ser la compañía de danzas peruana de referencia, presente en los grandes escenarios y en el
+                                    corazón de cada nueva generación.</p>
+                            </div>
+                        </div>
+
+                        <!-- Valores -->
+                        <ul class="values-list">
+                            <li>Tradición</li>
+                            <li>Disciplina</li>
+                            <li>Comunidad</li>
+                            <li>Pasión</li>
+                            <li>Excelencia</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="hero-visual">
-                    <img src="assets/img/carnaval-uno.webp" width="1600" height="1068"
-                        alt="Elenco de Wiñay Llaqta con vestuario de carnaval">
+            </div>
+        </section>
+
+        <!-- Equipo -->
+        <section id="equipo" class="team padding-xl">
+            <!-- Ajustar el ancho y centrar la caja -->
+            <div class="container">
+                <!-- Título de la sección -->
+                <div class="section-header">
+                    <span class="tag">NUESTRO ELENCO</span>
+                    <h2>Personas que dan vida a la tradición</h2>
+                    <p>La danza reúne el trabajo de quienes enseñan, crean y se presentan en escena.</p>
+                    <p class="disclaimer">Nombres y perfiles de ejemplo; reemplazar con información real del equipo antes de
+                        publicar.</p>
+                </div>
+
+                <!-- Alineación flexible de las tarjetas -->
+                <div class="team-members">
+                    <!-- Integrante 1 -->
+                    <article class="team-member">
+                        <img src="assets/img/cuadro-limeño-cien.webp" width="1068" height="1600"
+                            alt="Bailarina de cuadro limeño durante una presentación">
+                        <h3>Lucía Ramos</h3>
+                        <p><strong>Dirección artística</strong></p>
+                        <p>Coordina el repertorio y acompaña la preparación del elenco.</p>
+                    </article>
+
+                    <!-- Integrante 2 -->
+                    <article class="team-member">
+                        <img src="assets/img/cuadro-limeño-setenta-y-cinco.webp" width="1068" height="1600"
+                            alt="Pareja de bailarines interpretando un cuadro limeño">
+                        <h3>Miguel Huamán</h3>
+                        <p><strong>Formación en danza</strong></p>
+                        <p>Guía los talleres y comparte las tradiciones de nuestras danzas.</p>
+                    </article>
+
+                    <!-- Integrante 3 -->
+                    <article class="team-member">
+                        <img src="assets/img/nk-a.webp" width="1600" height="1068"
+                            alt="Músicos del elenco acompañando una danza en vivo">
+                        <h3>Elena Rojas</h3>
+                        <p><strong>Integrante del elenco</strong></p>
+                        <p>Participa en los ensayos y las presentaciones de la compañía.</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- SECCIÓN SERVICIOS-->
-        <section id="servicios" class="services container">
-            <div class="section-header">
-                <span class="tag">QUÉ HACEMOS</span>
-                <h2>Un escenario para cada ocasión</h2>
-                <p>Del salón de clases al gran teatro: acompañamos tu proyecto con la fuerza y el color de las danzas
-                    del Perú.</p>
+        <!-- Trayectoria: galería de escenarios -->
+        <section id="trayectoria" class="gallery padding-xl">
+            <!-- Ajustar el ancho y centrar la caja -->
+            <div class="container">
+                <!-- Título de la sección -->
+                <div class="section-header">
+                    <span class="tag">GALERÍA DE ESCENARIOS</span>
+                    <h2>Nuestra Trayectoria en Escena</h2>
+                    <p>Un recorrido por las danzas que hemos llevado a los escenarios del Perú y más allá.</p>
+                </div>
+
+                <!-- Alineación flexible de las imágenes -->
+                <div class="gallery-container">
+                    <img src="assets/img/cuadro-limeño-dos.webp" width="1600" height="1068"
+                        alt="Elenco interpretando un cuadro limeño con vestuario tradicional">
+                    <img src="assets/img/cuadro-limeño-setenta-y-tres.webp" width="1600" height="1068"
+                        alt="Pareja de bailarines de cuadro limeño posando en escena">
+                    <img src="assets/img/huaylars-cincuenta.webp" width="1600" height="1068"
+                        alt="Pareja interpretando huaylars con globos de colores">
+                    <img src="assets/img/huaylars-cuatro.webp" width="1600" height="1068"
+                        alt="Bailarines de huaylars avanzando juntos en el escenario">
+                    <img src="assets/img/huaylars-tres.webp" width="1600" height="1068"
+                        alt="Elenco de huaylars reunido después de su presentación">
+                    <img src="assets/img/nk-b.webp" width="1600" height="1068"
+                        alt="Danzante con sombrero durante una presentación folclórica">
+                </div>
             </div>
-
-            <!-- Servicio 1 -->
-            <article class="service-item">
-                <div class="service-image">
-                    <img src="assets/img/carnaval-tres.webp" width="1600" height="1068"
-                        alt="Danzante con vestuario colorido de carnaval">
-                </div>
-                <div class="service-info">
-                    <p class="service-number">FORMACIÓN</p>
-                    <h3>Clases y talleres de danza</h3>
-                    <p>Programas para niños, jóvenes y adultos que aprenden marinera, huayno, festejo y más. Grupos
-                        reducidos, docentes con trayectoria y una metodología que celebra cada raíz de nuestra cultura.
-                    </p>
-                    <a href="#contacto" class="link-more">Consultar talleres</a>
-                </div>
-            </article>
-
-            <!-- Servicio 2 -->
-            <article class="service-item">
-                <div class="service-info">
-                    <span class="service-number">ESCENARIO</span>
-                    <h3>Shows y presentaciones en vivo</h3>
-                    <p>Espectáculos completos con vestuario auténtico, música en vivo y coreografías que recorren la
-                        costa, sierra y selva. Ideales para festivales, aniversarios y celebraciones que buscan
-                        emocionar.</p>
-                    <a href="#contacto" class="link-more">Consultar shows</a>
-                </div>
-                <div class="service-image">
-                    <img src="assets/img/wallatas-once.webp" width="1600" height="1068"
-                        alt="Elenco interpretando la danza Wallatas en el escenario">
-                </div>
-            </article>
-
-            <!-- Servicio 3 -->
-            <article class="service-item">
-                <div class="service-image">
-                    <img src="assets/img/tondero.webp" width="1600" height="1068"
-                        alt="Pareja interpretando tondero durante una presentación">
-                </div>
-                <div class="service-info">
-                    <p class="service-number">DIRECCIÓN</p>
-                    <h3>Coreografía y dirección artística</h3>
-                    <p>Creamos piezas a medida para tu marca, obra o evento: concepto, montaje, vestuario y puesta en
-                        escena. Traducimos tu idea al lenguaje del folclore con rigor y sensibilidad artística.</p>
-                    <a href="#contacto" class="link-more">Consultar coreografías</a>
-                </div>
-            </article>
-
-            <!-- Servicio 4 -->
-            <article class="service-item">
-                <div class="service-info">
-                    <span class="service-number">CORPORATIVO</span>
-                    <h3>Danzas para eventos corporativos</h3>
-                    <p>Acompañamos celebraciones de empresas y encuentros institucionales con danzas peruanas.
-                        Coordinamos el repertorio y la presentación según la ocasión y el espacio disponible.</p>
-                    <a href="#contacto" class="link-more">Consultar sobre eventos</a>
-                </div>
-                <div class="service-image">
-                    <img src="assets/img/cuadro-limeño-cincuenta-y-cinco.webp" width="1600" height="1068"
-                        alt="Pareja bailando un cuadro limeño ante el público">
-                </div>
-            </article>
         </section>
 
-        <!-- SECCIÓN SOBRE NOSOTROS -->
-        <section id="sobre-nosotros" class="about container">
-            <div class="about-image-container">
-                <img src="assets/img/cuadro-limeño-siete.webp" width="1600" height="1068"
-                    alt="Elenco de Wiñay Llaqta reunido después de una presentación">
-                <div class="badge">23<br>AÑOS EN ESCENA</div>
-            </div>
-            <div class="about-content">
-                <span class="tag">SOBRE NOSOTROS</span>
-                <h2>Sembramos folclore desde hace 23 años</h2>
-                <p><strong>Wiñay Llaqta</strong> — "pueblo que crece" en quechua— nació de un grupo de bailarines
-                    apasionados por mostrar la riqueza de las danzas del Perú. Dos décadas después seguimos formando
-                    artistas y llevando nuestro repertorio a los escenarios de todo el país, siempre fieles a la raíz y
-                    abiertos a la creación.</p>
+        <!-- Video institucional -->
+        <section id="video" class="video-section padding-xl">
+            <!-- Ajustar el ancho y centrar la caja -->
+            <div class="container">
+                <!-- Título de la sección -->
+                <div class="section-header">
+                    <span class="tag">EN ESCENA</span>
+                    <h2>Mira a Wiñay Llaqta en acción</h2>
+                </div>
 
-                <div class="mission-vision">
-                    <div class="card">
-                        <h3>Misión</h3>
-                        <p>Difundir y preservar las danzas folclóricas del Perú con excelencia artística, formando
-                            comunidad alrededor de nuestra cultura.</p>
+                <!-- Objeto video con controles; solo carga los datos básicos al abrir la página -->
+                <div class="video-container">
+                    <video class="video-fluid" controls preload="metadata" poster="assets/img/portada-poster.jpg">
+                        <source src="assets/video/resumen-winay.mp4" type="video/mp4">
+                        Tu navegador no admite la reproducción de video.
+                    </video>
+                </div>
+
+                <!-- Enlace al canal de YouTube -->
+                <div class="video-canal">
+                    <a class="btn-primary" href="https://www.youtube.com/@Wi%C3%B1ayLlaqtaPer%C3%BA" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-youtube"></i>
+                        Ver más en nuestro canal de YouTube
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Logros -->
+        <section id="logros" class="stats padding-xl">
+            <!-- Ajustar el ancho y centrar la caja -->
+            <div class="container">
+                <span class="tag">LOGROS</span>
+                <h2>Una trayectoria que se baila</h2>
+
+                <!-- Alineación flexible de las cifras -->
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <h3>23</h3>
+                        <p>Años de trayectoria</p>
                     </div>
-                    <div class="card">
-                        <h3>Visión</h3>
-                        <p>Ser la compañía de danzas peruana de referencia, presente en los grandes escenarios y en el
-                            corazón de cada nueva generación.</p>
+                    <div class="stat-box">
+                        <h3>1,200+</h3>
+                        <p>Shows presentados *</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>4,500+</h3>
+                        <p>Alumnos formados *</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>300+</h3>
+                        <p>Eventos corporativos *</p>
                     </div>
                 </div>
 
-                <ul class="values-list">
-                    <li>Tradición</li>
-                    <li>Disciplina</li>
-                    <li>Comunidad</li>
-                    <li>Pasión</li>
-                    <li>Excelencia</li>
-                </ul>
+                <!-- Eventos referenciales -->
+                <div class="events-tags">
+                    <span>Festival Nacional de Folclore</span>
+                    <span>Semana Cultural del Perú</span>
+                    <span>Gala de Danzas del Bicentenario</span>
+                    <span>Encuentro Latinoamericano de Danza</span>
+                </div>
+
+                <p class="disclaimer">* Cifras y eventos referenciales, por confirmar antes de publicar.</p>
             </div>
         </section>
 
-        <!-- SECCIÓN EQUIPO -->
-        <section id="equipo" class="team container">
-            <div class="section-header">
-                <span class="tag">NUESTRO ELENCO</span>
-                <h2>Personas que dan vida a la tradición</h2>
-                <p>La danza reúne el trabajo de quienes enseñan, crean y se presentan en escena.</p>
-                <p class="disclaimer">Nombres y perfiles de ejemplo; reemplazar con información real del equipo antes de
-                    publicar.</p>
-            </div>
-            <div class="team-members">
-                <article class="team-member">
-                    <img src="assets/img/cuadro-limeño-cien.webp" width="1068" height="1600"
-                        alt="Bailarina de cuadro limeño durante una presentación">
-                    <h3>Lucía Ramos</h3>
-                    <p><strong>Dirección artística</strong></p>
-                    <p>Coordina el repertorio y acompaña la preparación del elenco.</p>
-                </article>
-                <article class="team-member">
-                    <img src="assets/img/cuadro-limeño-setenta-y-cinco.webp" width="1068" height="1600"
-                        alt="Pareja de bailarines interpretando un cuadro limeño">
-                    <h3>Miguel Huamán</h3>
-                    <p><strong>Formación en danza</strong></p>
-                    <p>Guía los talleres y comparte las tradiciones de nuestras danzas.</p>
-                </article>
-                <article class="team-member">
-                    <img src="assets/img/nk-a.webp" width="1600" height="1068"
-                        alt="Músicos del elenco acompañando una danza en vivo" >
-                    <h3>Elena Rojas</h3>
-                    <p><strong>Integrante del elenco</strong></p>
-                    <p>Participa en los ensayos y las presentaciones de la compañía.</p>
-                </article>
+        <!-- Testimonios -->
+        <section id="testimonios" class="testimonials padding-xl">
+            <!-- Ajustar el ancho y centrar la caja -->
+            <div class="container">
+                <!-- Título de la sección -->
+                <div class="section-header">
+                    <span class="tag">TESTIMONIOS</span>
+                    <h2>Lo que dicen de nosotros</h2>
+                </div>
+
+                <!-- Alineación flexible de las tarjetas -->
+                <div class="testimonial-cards-container">
+                    <article class="testimonial-card">
+                        <h3>Rosa Quispe</h3>
+                        <p>Madre de alumna</p>
+                        <p>"Mi hija encontró en Wiñay Llaqta disciplina, amigas y un amor enorme por nuestras
+                            danzas."</p>
+                    </article>
+                    <article class="testimonial-card">
+                        <h3>Diego Salinas</h3>
+                        <p>Coordinador de eventos corporativos</p>
+                        <p>"Profesionales de principio a fin. La activación de marca superó nuestras expectativas."
+                        </p>
+                    </article>
+                    <article class="testimonial-card">
+                        <h3>Ana Torres</h3>
+                        <p>Gestora cultural municipal</p>
+                        <p>"Su elenco elevó nuestro festival. Puntualidad, arte y un cariño genuino por el
+                            público."</p>
+                    </article>
+                </div>
             </div>
         </section>
 
-        <!-- SECCIÓN TRAYECTORIA -->
-        <section id="trayectoria" class="gallery container">
-            <div class="section-header">
-                <span class="tag">GALERÍA DE ESCENARIOS</span>
-                <h2>Nuestra Trayectoria en Escena</h2>
-                <p>Un recorrido por las danzas que hemos llevado a los escenarios del Perú y más allá.</p>
-            </div>
-            <div class="gallery-container">
-                <img src="assets/img/cuadro-limeño-dos.webp" width="1600" height="1068"
-                    alt="Elenco interpretando un cuadro limeño con vestuario tradicional">
-                <img src="assets/img/cuadro-limeño-setenta-y-tres.webp" width="1600" height="1068"
-                    alt="Pareja de bailarines de cuadro limeño posando en escena">
-                <img src="assets/img/huaylars-cincuenta.webp" width="1600" height="1068"
-                    alt="Pareja interpretando huaylars con globos de colores" >
-                <img src="assets/img/huaylars-cuatro.webp" width="1600" height="1068"
-                    alt="Bailarines de huaylars avanzando juntos en el escenario" >
-                <img src="assets/img/huaylars-tres.webp" width="1600" height="1068"
-                    alt="Elenco de huaylars reunido después de su presentación">
-                <img src="assets/img/nk-b.webp" width="1600" height="1068"
-                    alt="Danzante con sombrero durante una presentación folclórica">
-            </div>
-        </section>
+        <!-- Contacto -->
+        <section id="contacto" class="contact padding-xl">
+            <!-- Ajustar el ancho y centrar la caja -->
+            <div class="container">
+                <!-- Título de la sección -->
+                <div class="section-header">
+                    <span class="tag">CONTACTO</span>
+                    <h2>Conversemos sobre tu próximo evento</h2>
+                </div>
 
-        <!-- SECCIÓN LOGROS -->
-        <section id="logros" class="stats container">
-            <span class="tag">LOGROS</span>
-            <h2>Una trayectoria que se baila</h2>
+                <!-- Datos de contacto -->
+                <div class="contact-content">
+                    <div>
+                        <h3>Correo y teléfono</h3>
+                        <p>Correo: winayllaqta@gmail.com</p>
+                        <p>Teléfono de ejemplo: +51 972 591 692</p>
+                    </div>
+                    <div>
+                        <h3>Ubicación</h3>
+                        <p>Lince, Lima - Perú</p>
+                    </div>
+                </div>
 
-            <div class="stats-container">
-                <div class="stat-box">
-                    <h3>23</h3>
-                    <p>Años de trayectoria</p>
-                </div>
-                <div class="stat-box">
-                    <h3>1,200+</h3>
-                    <p>Shows presentados *</p>
-                </div>
-                <div class="stat-box">
-                    <h3>4,500+</h3>
-                    <p>Alumnos formados *</p>
-                </div>
-                <div class="stat-box">
-                    <h3>300+</h3>
-                    <p>Eventos corporativos *</p>
-                </div>
-            </div>
-            <div class="events-tags">
-                <span>Festival Nacional de Folclore</span>
-                <span>Semana Cultural del Perú</span>
-                <span>Gala de Danzas del Bicentenario</span>
-                <span>Encuentro Latinoamericano de Danza</span>
-            </div>
-        </section>
+                <!-- Objeto formulario (pendiente conectar el envío a un servicio o backend) -->
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-flex">
+                        <!-- Campo servicio de interés -->
+                        <div class="form-col-50">
+                            <select class="form-control" name="servicio" required>
+                                <option value="" selected hidden>Selecciona un servicio</option>
+                                <option value="talleres">Clases y talleres de danza</option>
+                                <option value="shows">Shows y presentaciones en vivo</option>
+                                <option value="coreografia">Coreografía y dirección artística</option>
+                                <option value="corporativo">Danzas para eventos corporativos</option>
+                            </select>
+                        </div>
 
-        <!-- SECCIÓN TESTIMONIOS -->
-        <section id="testimonios" class="testimonials container">
-            <div class="section-header">
-                <p class="tag">TESTIMONIOS</p>
-                <h2>Lo que dicen de nosotros</h2>
-            </div>
+                        <!-- Campo nombre completo -->
+                        <div class="form-col-50">
+                            <input class="form-control" type="text" name="nombre" placeholder="Nombre y apellidos completos" required>
+                        </div>
 
-            <div class="testimonial-cards-container">
-                <article class="testimonial-card">
-                    <h3>Rosa Quispe</h3>
-                    <p>Madre de alumna</p>
-                    <p>"Mi hija encontró en Wiñay Llaqta disciplina, amigas y un amor enorme por nuestras
-                        danzas."</p>
-                </article>
-                <article class="testimonial-card">
-                    <h3>Diego Salinas</h3>
-                    <p>Coordinador de eventos corporativos</p>
-                    <p>"Profesionales de principio a fin. La activación de marca superó nuestras expectativas."
-                    </p>
-                </article>
-                <article class="testimonial-card">
-                    <h3>Ana Torres</h3>
-                    <p>Gestora cultural municipal</p>
-                    <p>"Su elenco elevó nuestro festival. Puntualidad, arte y un cariño genuino por el
-                        público."</p>
-                </article>
-            </div>
-        </section>
+                        <!-- Campo correo electrónico -->
+                        <div class="form-col-50">
+                            <input class="form-control" type="email" name="correo" placeholder="Correo electrónico" required>
+                        </div>
 
-        <!-- SECCIÓN CONTACTO -->
-        <section id="contacto" class="contact container">
-            <div class="section-header">
-                <p class="tag">CONTACTO</p>
-                <h2>Conversemos sobre tu próximo evento</h2>
-            </div>
-            <div class="contact-content">
-                <div>
-                    <h3>Correo y teléfono</h3>
-                    <p>Correo de ejemplo: wiñayllaqta@gmail.com</p>
-                    <p>Teléfono de ejemplo: +51 972 591 692</p>
-                </div>
-                <div>
-                    <h3>Ubicación</h3>
-                    <p>Lince, Lima - Perú</p>
-                </div>
+                        <!-- Campo teléfono -->
+                        <div class="form-col-50">
+                            <input class="form-control" type="tel" name="telefono" placeholder="Teléfono de contacto">
+                        </div>
+
+                        <!-- Campo mensaje -->
+                        <div class="form-col-100">
+                            <textarea class="form-control form-noresize" name="mensaje" placeholder="Cuéntanos sobre tu evento" required cols="40" rows="6"></textarea>
+                        </div>
+
+                        <!-- Campo aceptar el contacto -->
+                        <div class="form-col-100">
+                            <input type="checkbox" id="acepto" name="acepto" required>
+                            <label for="acepto">
+                                Acepto que Wiñay Llaqta me contacte para responder esta consulta.
+                            </label>
+                        </div>
+
+                        <!-- Campo botón Enviar Mensaje -->
+                        <div class="form-col-100">
+                            <button class="form-submit" type="submit">Enviar Mensaje</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
 
-    <!-- PIE DE PÁGINA-->
-    <footer class="footer">
+    <!-- Pie de página -->
+    <footer class="footer padding-xs" id="pie">
+        <!-- Ajustar el ancho y centrar la caja -->
         <div class="footer-container container">
+            <!-- Columna 1 -->
             <div class="footer-brand">
-                <h2>Wiñay Llaqta</h2>
+                <!-- Logo vectorizado -->
+                <img class="footer-logo" src="assets/img/logo-winay-llaqta.svg" alt="Wiñay Llaqta Perú">
                 <p>Compañía de danzas folclóricas del Perú.<br>Color, tradición y arte en cada escenario.</p>
             </div>
 
+            <!-- Columna 2 -->
             <div class="footer-links">
                 <h3>EXPLORA</h3>
                 <ul>
@@ -324,17 +581,43 @@
                 </ul>
             </div>
 
+            <!-- Columna 3 -->
             <div class="footer-legal-social">
                 <h3>Información y redes</h3>
                 <p>Libro de Reclamaciones Virtual: enlace pendiente de confirmar.</p>
                 <p>Facebook, Instagram y TikTok: perfiles oficiales pendientes de confirmar.</p>
+
+                <!-- Redes sociales -->
+                <div class="footer-rs">
+                    <a href="https://facebook.com/" target="_blank" rel="noopener" title="Facebook">
+                        <i class="fa-brands fa-facebook fa-xl"></i>
+                    </a>
+                    <a href="https://instagram.com/" target="_blank" rel="noopener" title="Instagram">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </a>
+                    <a href="https://tiktok.com/" target="_blank" rel="noopener" title="TikTok">
+                        <i class="fa-brands fa-tiktok fa-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Wi%C3%B1ayLlaqtaPer%C3%BA" target="_blank" rel="noopener" title="YouTube">
+                        <i class="fa-brands fa-youtube fa-xl"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=51972591692&text=Hola, necesito información sobre sus servicios de danza" target="_blank" rel="noopener" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp fa-xl"></i>
+                    </a>
+                </div>
             </div>
         </div>
+
+        <!-- Copyright -->
         <div class="footer-bottom container">
             <p>&copy; 2026 Wiñay Llaqta · Compañía de Danzas. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-</body>
+    <!-- Botón para volver al inicio de la página -->
+    <a class="scroll-up" href="#inicio" title="Volver arriba">
+        <i class="fa-solid fa-angle-up"></i>
+    </a>
 
+</body>
 </html>
