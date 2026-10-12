@@ -180,6 +180,18 @@ section {
     font-size: 14px;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* Botones */
 .btn-primary, .btn-outline {
     display: inline-block;
@@ -446,9 +458,16 @@ section {
 
 /* Tabla de tarifas */
 .tbl-tarifas {
+    min-width: 620px;
     width: 100%;
     border-collapse: collapse; /* Combinar los bordes */
     background: var(--color-white);
+    text-align: left;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 12px;
 }
 
 .tbl-tarifas th,
@@ -461,6 +480,10 @@ section {
     background-color: var(--color-primary);
     color: var(--color-white);
     text-transform: uppercase;
+}
+
+.tbl-tarifas th {
+    font-family: var(--font-title);
 }
 
 .tbl-tarifas tbody tr {
@@ -497,6 +520,18 @@ section {
 .video-canal {
     margin-top: 24px;
     text-align: center;
+}
+
+.video-youtube {
+    margin-top: 32px;
+    aspect-ratio: 16 / 9;
+    background: var(--color-primary);
+}
+
+.video-youtube iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 /* Logros y eventos referenciales */
@@ -550,7 +585,7 @@ section {
 }
 
 .form-col-50 {
-    flex: 48%;
+    flex: 1 1 calc(50% - 10px);
 }
 
 .form-col-100 {
@@ -567,6 +602,27 @@ section {
     outline: none;
     border-bottom: 1px solid var(--color-text);
     transition: all 0.4s ease-in-out;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.form-control:focus-visible {
+    outline: 2px solid var(--color-secondary);
+    outline-offset: 3px;
+}
+
+.form-control::placeholder {
+    color: #727983;
+    opacity: 1;
+}
+
+.form-flex input[type="checkbox"] {
+    accent-color: var(--color-primary);
 }
 
 .form-control:focus {
@@ -664,4 +720,29 @@ section {
     border-radius: 50%;
 
     z-index: 1000;
+}
+
+/* En pantallas angostas la tabla se desplaza y los campos ocupan todo el ancho */
+@media (max-width: 640px) {
+    .table-responsive {
+        border-radius: 8px;
+    }
+
+    .tbl-tarifas th,
+    .tbl-tarifas td {
+        padding: 12px;
+    }
+
+    .form-col-50,
+    .form-col-100 {
+        flex-basis: 100%;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-content div {
+        width: 100%;
+    }
 }
