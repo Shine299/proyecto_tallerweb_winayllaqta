@@ -1,0 +1,311 @@
+<!-- Representa la versión 5 de HTML -->
+<!DOCTYPE html>
+
+<!-- Representa la página en la ventana del navegador -->
+<html lang="es">
+
+<!-- Configuración de la página -->
+<head>
+    <!-- Conjunto de caracteres para el idioma español -->
+    <meta charset="UTF-8">
+
+    <!-- Permite habilitar el diseño web responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la pestaña en el navegador -->
+    <title>Contacto | Wiñay Llaqta</title>
+
+    <!-- Enlazar el HTML con la hoja de estilos externa -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Enlazar el HTML con fuentes externas de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <!-- Enlazar el HTML con la librería de iconos de font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Enlazar el HTML con el favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<!-- Contenido de la página -->
+<body>
+
+    <!-- Barra superior (top-bar) -->
+    <header id="top-bar">
+        <div class="container">
+            <div class="top-bar-flex">
+                <div class="top-contacto">
+                    <a href="tel:+51972591692">
+                        <i class="fa-solid fa-phone"></i>
+                        +51 972 591 692
+                    </a>
+
+                    <a href="mailto:winayllaqta@gmail.com?subject=Consulta%20desde%20la%20web">
+                        <i class="fa-solid fa-envelope"></i>
+                        winayllaqta@gmail.com
+                    </a>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="top-rs">
+                    <a href="https://www.facebook.com/search/top?q=Wi%C3%B1ay%20Llaqta%20Per%C3%BA" target="_blank" rel="noopener" title="Facebook">
+                        <i class="fa-brands fa-facebook fa-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/explore/search/keyword/?q=wi%C3%B1ay%20llaqta" target="_blank" rel="noopener" title="Instagram">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/search?q=wi%C3%B1ay%20llaqta%20per%C3%BA" target="_blank" rel="noopener" title="TikTok">
+                        <i class="fa-brands fa-tiktok fa-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Wi%C3%B1ayLlaqtaPer%C3%BA" target="_blank" rel="noopener" title="YouTube">
+                        <i class="fa-brands fa-youtube fa-xl"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=51972591692&amp;text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20danza" target="_blank" rel="noopener" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp fa-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cabecera de página -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo-container" title="Inicio">Wiñay Llaqta</a>
+
+            <!-- Barra de menú -->
+            <nav class="navbar" id="menu-principal">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="galeria.html">Galería</a></li>
+                    <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <a href="contacto.html#formulario" class="btn-primary btn-header">Cotiza tu evento</a>
+
+            <!-- Botón hamburguesa -->
+            <button class="nav-menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Título de la página -->
+        <section class="page-title">
+            <div class="container">
+                <span class="subtitle">CONTÁCTANOS</span>
+                <h1>Contacto</h1>
+
+                <nav class="breadcrumb">
+                    <a href="index.html">Inicio</a> / Contacto
+                </nav>
+            </div>
+        </section>
+
+        <!-- Canales de atención -->
+        <section id="canales" class="contact padding-xl">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag">CANALES DE ATENCIÓN</span>
+                    <h2>Conversemos sobre tu próximo evento</h2>
+                    <p class="disclaimer">Teléfono y horario de atención son datos de demostración para el proyecto académico.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <i class="fa-solid fa-phone"></i>
+                        <h3>Teléfono</h3>
+                        <p>Llámanos para coordinar fechas y presentaciones.</p>
+                        <a href="tel:+51972591692" class="link-more">+51 972 591 692</a>
+                    </article>
+
+                    <article class="contact-card">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>Escríbenos y te respondemos a la brevedad.</p>
+                        <a href="https://api.whatsapp.com/send/?phone=51972591692&amp;text=Hola%2C%20quisiera%20cotizar%20una%20presentaci%C3%B3n%20de%20danza" target="_blank" rel="noopener" class="link-more">Iniciar conversación</a>
+                    </article>
+
+                    <article class="contact-card">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h3>Correo</h3>
+                        <p>Envíanos tu consulta o propuesta de evento.</p>
+                        <a href="mailto:winayllaqta@gmail.com?subject=Cotizaci%C3%B3n%20de%20presentaci%C3%B3n" class="link-more">winayllaqta@gmail.com</a>
+                    </article>
+
+                    <!-- Redes sociales -->
+                    <article class="contact-card">
+                        <i class="fa-solid fa-share-nodes"></i>
+                        <h3>Redes sociales</h3>
+                        <p>Mira nuestras presentaciones y novedades.</p>
+                        <div class="contact-rs">
+                            <a href="https://www.facebook.com/search/top?q=Wi%C3%B1ay%20Llaqta%20Per%C3%BA" target="_blank" rel="noopener" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/explore/search/keyword/?q=wi%C3%B1ay%20llaqta" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/search?q=wi%C3%B1ay%20llaqta%20per%C3%BA" target="_blank" rel="noopener" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                            <a href="https://www.youtube.com/@Wi%C3%B1ayLlaqtaPer%C3%BA" target="_blank" rel="noopener" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section id="formulario" class="padding-xl">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag">COTIZACIÓN</span>
+                    <h2>Cuéntanos sobre tu evento</h2>
+                </div>
+
+                <!-- Objeto formulario -->
+                <form class="contact-form" action="#" method="post">
+                    <div class="form-flex">
+                        <!-- Campo nombre completo -->
+                        <div class="form-col-50">
+                            <label class="form-label" for="nombre">Nombre y apellidos *</label>
+                            <input class="form-control" id="nombre" type="text" name="nombre" placeholder="Ej.: Ana Pérez" autocomplete="name" maxlength="60" required>
+                        </div>
+
+                        <!-- Campo correo electrónico -->
+                        <div class="form-col-50">
+                            <label class="form-label" for="correo">Correo electrónico *</label>
+                            <input class="form-control" id="correo" type="email" name="correo" placeholder="nombre@correo.com" autocomplete="email" maxlength="80" required>
+                        </div>
+
+                        <!-- Campo teléfono -->
+                        <div class="form-col-50">
+                            <label class="form-label" for="telefono">Teléfono de contacto *</label>
+                            <input class="form-control" id="telefono" type="tel" name="telefono" placeholder="+51 999 999 999" autocomplete="tel" minlength="9" maxlength="15" required>
+                        </div>
+
+                        <!-- Campo asunto -->
+                        <div class="form-col-50">
+                            <label class="form-label" for="asunto">Asunto *</label>
+                            <input class="form-control" id="asunto" type="text" name="asunto" placeholder="Ej.: Show para aniversario" maxlength="80" required>
+                        </div>
+
+                        <!-- Campo servicio de interés -->
+                        <div class="form-col-100">
+                            <label class="form-label" for="servicio">Servicio de interés *</label>
+                            <select class="form-control" id="servicio" name="servicio" required>
+                                <option value="" selected hidden>Selecciona un servicio</option>
+                                <option value="talleres">Clases y talleres de danza</option>
+                                <option value="shows">Shows y presentaciones en vivo</option>
+                                <option value="coreografia">Coreografía y dirección artística</option>
+                                <option value="corporativo">Danzas para eventos corporativos</option>
+                            </select>
+                        </div>
+
+                        <!-- Campo mensaje -->
+                        <div class="form-col-100">
+                            <label class="form-label" for="mensaje">Cuéntanos sobre tu evento *</label>
+                            <textarea class="form-control form-noresize" id="mensaje" name="mensaje" placeholder="Fecha, lugar y tipo de presentación que tienes en mente" maxlength="500" rows="6" required></textarea>
+                        </div>
+
+                        <!-- Campo aceptar el contacto -->
+                        <div class="form-col-100">
+                            <input type="checkbox" id="acepto" name="acepto" required>
+                            <label for="acepto">Acepto que Wiñay Llaqta me contacte para responder esta consulta.</label>
+                        </div>
+
+                        <!-- Campo botón Enviar Mensaje -->
+                        <div class="form-col-100">
+                            <button class="form-submit" type="submit">Enviar Mensaje</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- Ubicación y horario -->
+        <section id="ubicacion" class="location padding-xl">
+            <div class="container">
+                <div class="location-row">
+                    <div class="location-info">
+                        <span class="tag">UBICACIÓN</span>
+                        <h2>Visítanos en nuestra sede</h2>
+                        <p><i class="fa-solid fa-location-dot"></i> Jr. Bernardo Alcedo 611, Lince, Lima - Perú</p>
+                        <h3>Horario de atención</h3>
+                        <p><i class="fa-regular fa-clock"></i> Lunes a viernes: 3:00 p. m. - 9:00 p. m.</p>
+                        <p><i class="fa-regular fa-clock"></i> Sábados: 9:00 a. m. - 1:00 p. m.</p>
+                    </div>
+
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=Jir%C3%B3n%20Bernardo%20Alcedo%20611%2C%20Lince%2C%20Lima%2C%20Per%C3%BA&amp;z=17&amp;output=embed" title="Mapa de la sede de Wiñay Llaqta en Jr. Bernardo Alcedo 611, Lince" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer padding-xs" id="pie">
+        <div class="footer-container container">
+            <div class="footer-brand">
+                <a href="index.html" title="Inicio">
+                    <img class="footer-logo" src="assets/img/logo-winay-llaqta.svg" alt="Logo de Wiñay Llaqta Perú">
+                </a>
+                <p>Compañía de danzas folclóricas del Perú.<br>Color, tradición y arte en cada escenario.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>EXPLORA</h3>
+                <ul>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios y tarifas</a></li>
+                    <li><a href="galeria.html">Galería y videos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links footer-contacto">
+                <h3>CONTACTO</h3>
+                <ul>
+                    <li><a href="tel:+51972591692"><i class="fa-solid fa-phone"></i> +51 972 591 692</a></li>
+                    <li><a href="mailto:winayllaqta@gmail.com?subject=Consulta%20desde%20la%20web"><i class="fa-solid fa-envelope"></i> winayllaqta@gmail.com</a></li>
+                    <li><a href="contacto.html#ubicacion"><i class="fa-solid fa-location-dot"></i> Jr. Bernardo Alcedo 611, Lince</a></li>
+                </ul>
+
+                <!-- Redes sociales -->
+                <div class="footer-rs">
+                    <a href="https://www.facebook.com/search/top?q=Wi%C3%B1ay%20Llaqta%20Per%C3%BA" target="_blank" rel="noopener" title="Facebook">
+                        <i class="fa-brands fa-facebook fa-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/explore/search/keyword/?q=wi%C3%B1ay%20llaqta" target="_blank" rel="noopener" title="Instagram">
+                        <i class="fa-brands fa-instagram fa-xl"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/search?q=wi%C3%B1ay%20llaqta%20per%C3%BA" target="_blank" rel="noopener" title="TikTok">
+                        <i class="fa-brands fa-tiktok fa-xl"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Wi%C3%B1ayLlaqtaPer%C3%BA" target="_blank" rel="noopener" title="YouTube">
+                        <i class="fa-brands fa-youtube fa-xl"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=51972591692&amp;text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20danza" target="_blank" rel="noopener" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp fa-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom container">
+            <p>&copy; 2026 Wiñay Llaqta · Compañía de Danzas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón para volver arriba -->
+    <button class="scroll-up" type="button" title="Ir arriba" aria-label="Ir arriba" hidden>
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+
+    <!-- Enlazar HTML con la librería principal de javascript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
