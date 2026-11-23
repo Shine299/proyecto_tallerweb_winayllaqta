@@ -370,13 +370,6 @@ section {
     color: var(--color-white);
 }
 
-/* El video cubre todo el ancho; object-fit recorta sin deformar */
-.hero-video {
-    width: 100%;
-    height: 560px;
-    object-fit: cover;
-}
-
 .hero-texto {
     /* Permite posicionar la caja hijo encima del video */
     position: absolute;
@@ -944,6 +937,60 @@ section {
     display: none; /* Alterna la visibilidad del botón */
 }
 
+/* CARRUSEL */
+
+/* El carrusel cubre todo el ancho de la portada */
+.carrusel {
+    position: relative;
+}
+
+.carrusel-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* En Firefox */
+}
+
+.carrusel-track::-webkit-scrollbar {
+    display: none; /* En Chrome o Safari */
+}
+
+.carrusel-slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+}
+
+.carrusel-slide img {
+    width: 100%;
+    height: 560px;
+    object-fit: cover; /* Recorta sin deformar */
+    display: block;
+}
+
+/* Punto de enfoque del recorte: evita cortar rostros en pantallas anchas */
+.carrusel-enfoque-medio {
+    object-position: center 45%;
+}
+
+.carrusel-enfoque-alto {
+    object-position: center 10%;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+}
+
+.carrusel-btn.prev { left: 0.5rem; }
+.carrusel-btn.next { right: 0.5rem; }
+
 /* DISEÑO WEB RESPONSIVE */
 
 /* Para pantallas de Laptops y escritorio pequeño */
@@ -1021,7 +1068,7 @@ section {
         transform: translateY(0);
     }
 
-    .hero-video {
+    .carrusel-slide img {
         height: 480px;
     }
 
@@ -1118,7 +1165,7 @@ section {
     }
 
     /* El texto de la portada pasa debajo del video para no taparlo */
-    .hero-video {
+    .carrusel-slide img {
         height: 300px;
     }
 
@@ -1207,7 +1254,7 @@ section {
         width: auto;
     }
 
-    .hero-video {
+    .carrusel-slide img {
         height: 220px;
     }
 

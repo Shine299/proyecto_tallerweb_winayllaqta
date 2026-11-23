@@ -57,3 +57,33 @@ window.addEventListener("scroll", mostrarBotonArriba);
 botonArriba.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+// CARRUSEL
+const pistaCarrusel = document.querySelector(".carrusel-track");
+const botonAnterior = document.querySelector(".carrusel-btn.prev");
+const botonSiguiente = document.querySelector(".carrusel-btn.next");
+
+// Solo existe en la página de inicio; en las demás páginas no se ejecuta
+if (pistaCarrusel) {
+    // Avanza una diapositiva; en la última vuelve a la primera
+    botonSiguiente.addEventListener("click", function () {
+        // El -1 compensa los decimales que a veces deja el navegador en scrollLeft
+        const llegoAlFinal =
+            pistaCarrusel.scrollLeft + pistaCarrusel.clientWidth >= pistaCarrusel.scrollWidth - 1;
+
+        if (llegoAlFinal) {
+            pistaCarrusel.scrollTo({ left: 0, behavior: "smooth" });
+        } else {
+            pistaCarrusel.scrollBy({ left: pistaCarrusel.clientWidth, behavior: "smooth" });
+        }
+    });
+
+    // Retrocede una diapositiva; en la primera salta a la última
+    botonAnterior.addEventListener("click", function () {
+        if (pistaCarrusel.scrollLeft <= 1) {
+            pistaCarrusel.scrollTo({ left: pistaCarrusel.scrollWidth, behavior: "smooth" });
+        } else {
+            pistaCarrusel.scrollBy({ left: -pistaCarrusel.clientWidth, behavior: "smooth" });
+        }
+    });
+}
