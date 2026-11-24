@@ -847,6 +847,15 @@ section {
     color: var(--color-primary);
 }
 
+/* Aviso tras enviar el formulario */
+.form-status {
+    margin-top: 15px;
+}
+
+.form-status a {
+    text-decoration: underline;
+}
+
 /* Pie de página */
 .footer h2, .footer h3 {
     color: var(--color-secondary);

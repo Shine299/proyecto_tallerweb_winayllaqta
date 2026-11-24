@@ -87,3 +87,30 @@ if (pistaCarrusel) {
         }
     });
 }
+
+// FORMULARIO DE CONTACTO
+const formularioContacto = document.querySelector("#form-contacto");
+
+// Solo existe en la página de contacto; en las demás páginas no se ejecuta
+if (formularioContacto) {
+    formularioContacto.addEventListener("submit", function (evento) {
+        // Evita el envío nativo para armar el correo con un formato legible
+        evento.preventDefault();
+
+        const campos = formularioContacto.elements;
+        const cuerpo =
+            "Nombre: " + campos.nombre.value + "\n" +
+            "Correo: " + campos.correo.value + "\n" +
+            "Teléfono: " + campos.telefono.value + "\n" +
+            "Servicio de interés: " + campos.servicio.selectedOptions[0].text + "\n\n" +
+            campos.mensaje.value;
+
+        const enlaceCorreo =
+            "mailto:winayllaqta@gmail.com" +
+            "?subject=" + encodeURIComponent(campos.asunto.value) +
+            "&body=" + encodeURIComponent(cuerpo);
+
+        document.querySelector("#form-estado").hidden = false;
+        window.location.href = enlaceCorreo;
+    });
+}
